@@ -1,0 +1,379 @@
+<div key={index} className=' flex justify-between pt-5 pb-10 px-10 border-b-[1px] border-zinc-600'>
+                    <div className=' w-1/4'>
+                        <a href=""><span  className=' border-b-[2px] border-zinc-600'> {review.firm} </span></a>
+                    </div>
+                        <div className=' w-1/4'>
+                            <h4>{review.services.title}</h4>
+                            <div>
+                    {review.services.body.map((item,index)=>(
+                        <a key={index} href="">
+                            <span>{item}</span>
+                        </a>
+                    ))}
+                            </div>
+                        </div>
+                        <div className=' w-1/4'>
+                            <h6>{review.reviewer.name}</h6>
+                            <div>
+                                <img src={review.reviewer.imgUrl} alt="" />
+                            </div>
+                            <p>{review.reviewer.review}</p>
+                        </div>
+                        <div className=' w-1/4 flex justify-end'>
+                            <a href=""><span className='border-b-[2px] border-zinc-600 uppercase pb-1'>{review.read}</span></a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+import React from 'react'
+import { FaArrowUpLong } from "react-icons/fa6";
+const Reviews = () => {
+    return (
+        <div className='w-full'>
+            <div className=' border-b-[1px] border-zinc-600 pl-10 pb-10'>
+                <h1 className='text-6xl'>Clients' reviews</h1>
+            </div>
+            <div className=' '>
+                {[
+                    {
+                        firm: "Karman Ventures",
+                        services: {
+                            title: "Services",
+                            body: ["Investor deck", "Sales Deck"]
+                        },
+                        reviewer: {
+                            name: "William Barnes",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2023/02/William-Barnes-1-300x300.png",
+                            review: "They were transparent about the time and the stages of the project. The end product is high quality, and I feel confident about how they were handholding the client through the process. I feel like I can introduce them to someone who needs to put a sales deck together from scratch, and they would be able to handhold the client experience from 0 to 100 very effectively from story to design. 5/5"
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Planety",
+                        services: {
+                            title: "Services",
+                            body: ["agency", "big news deck", "Branded template", "Investor Deck", "project presentation", "sales deck", "startup pitch"]
+                        },
+                        reviewer: {
+                            name: "Nina Walloch",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/05/Nina.jpg.png",
+                            review: "Ihor and his team tackled the projects with great professionalism and creativity. They understood our brand value and turned this into excellent slide designs. The process was seamless and very effective, so we decided to roll this out across all our presentation decks. Furthermore, their understanding, professionalism, and creativity have secured a continued partnership."
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Workiz Easy",
+                        services: {
+                            title: "Services",
+                            body: ["Company presentation", "onboarding presentation", "policy deck & playbook", "redesign", "sales deck"]
+                        },
+                        reviewer: {
+                            name: "Tomer Levy",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/05/Tomer.png",
+                            review: "OCHI brought a certain level of professionalism into our presentations that we were lacking before. When I showed our management and HR teams the presentations OCHI developed, they were amazed — the final product was exactly what we needed to create a better experience for new employees and our clients."
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Premium Blend",
+                        services: {
+                            title: "Services",
+                            body: ["Branded template", "illustrations"]
+                        },
+                        reviewer: {
+                            name: "Ellen kim",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/12/image-677-300x298.png",
+                            review: "They are truly changing the landscape of presentations!! Fast, effective, and nice humans that listened to every detail of our needs. Creating a deck with their template brings so much joy and ease. We proudly showcase their design in our calls and presentations."
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Hypercare Systems",
+                        services: {
+                            title: "Services",
+                            body: ["Investor deck", "Startup pitch"]
+                        },
+                        reviewer: {
+                            name: "Brendan Goss",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/05/1627398835558-11.png",
+                            review: "The service received from OCHI was absolutely first-class. Their close attention to detail, and deep thought in terms of narrative, flow, and aesthetics, completely exceeded my expectations, which were very high from the outset. Especially loved and appreciated the creation of visuals, animation, and advice around the look and feel that we are after. We will definitely continue working with Ihor and his team. I cannot recommend them highly enough."
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Officevibe",
+                        services: {
+                            title: "Services",
+                            body: ["Branded Template"]
+                        },
+                        reviewer: {
+                            name: "Raff Labrie",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2023/10/Photo-300x300.png",
+                            review: "Ochi has an impressive understanding of what’s needed to do an effective presentation. The stakeholders at work said it’s the best most complete PP template they’ve ever seen. Ochi delivered more than I was expecting and we were really surprised with the quality of his work. Will work with Ochi design again for sure!"
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Orderlion",
+                        services: {
+                            title: "Services",
+                            body: ["Agency", "Investor deck", "Product presentation", "Review", "Sales Deck"]
+                        },
+                        reviewer: {
+                            name: "Stefan Strohmer",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/05/Stefan-300x300.jpg",
+                            review: "The result was just amazing! For me, a designer is exceptional when you are so satisfied with the result that you want to look at it the whole day like a kid with a new toy. Ihor and his team delivered exactly that! They are very talented designers who understand the real business problem we are trying to solve and iterate over many drafts to achieve the best possible outcome. We are looking for a long-lasting working relationship!"
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Black book",
+                        services: {
+                            title: "Services",
+                            body: ["Review", "Startup pitch"]
+                        },
+                        reviewer: {
+                            name: "Jaci Smith",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2022/05/Jaci.jpg.png",
+                            review: "They nailed what our product was all about. We found their ability to workshop all the angles and take on feedback was great and it shows in the final product. Everything moved with a milestone dynamic brief via Notion which was handy to track progress. We’re very happy with the process and the final product. All was handled well and professionally."
+                        },
+                        read: "Read"
+                    },
+                    {
+                        firm: "Trawa Energy",
+                        services: {
+                            title: "Services",
+                            body: ["Branding", "Investor deck", "Startup Pitch"]
+                        },
+                        reviewer: {
+                            name: "David budde",
+                            imgUrl: "https://ochi.design/wp-content/uploads/2023/02/David-Budde-1-300x300.png",
+                            review: "We were surprised by the accuracy with which Ochi Design nailed the overall design language that perfectly aligned with our personal preferences and the vision that we have for our young company."
+                        },
+                        read: "Read"
+                    }
+                ].map((review, index) => (
+                    <div key={index} className=' pt-5 pb-10 px-10 border-b-[1px] border-zinc-600'>
+                        <div className='flex justify-between mb-20'>
+                            <div className=' w-1/4'>
+                                <a href=""><span className=' border-b-[2px] border-zinc-600 capitalize'> {review.firm} </span></a>
+                            </div>
+                            <div className=' w-1/4'>
+                                <h4 className=' capitalize'>{review.services.title}</h4>
+                            </div>
+                            <div className=' w-[35%]'>
+                                <h6 className=' capitalize'>{review.reviewer.name}</h6>
+                            </div>
+                            <div className=' w-[15%] flex justify-end'>
+                                <a href=""><span className='border-b-[2px] border-zinc-600 uppercase pb-1'>{review.read}</span></a>
+                            </div>
+                        </div>
+                        <div className='flex justify-between'>
+                            <div className='w-1/4'></div>
+                            <div className='w-1/4 flex flex-col gap-2'>
+                                {review.services.body.map((item, index) => (
+                                    <div className='flex items-center gap-2'>
+                                        <a className=' border-[1px] border-zinc-600 rounded-full w-fit px-3 py-1' key={index} href="">
+                                            <span className=' uppercase'>{item}</span>
+                                        </a>
+                                        <div className="arrow h-8 w-8 opacity-0 border-[1px] rounded-full border-zinc-500 flex items-center justify-center" >
+                                            <FaArrowUpLong className='rotate-45' />
+                                        </div >
+                                    </div>
+                                ))}
+                            </div>
+                            <div className='w-[35%]'>
+                                <div>
+                                    <img className=' h-24 w-24 rounded-lg mb-5' src={review.reviewer.imgUrl} alt="" />
+                                    <p>{review.reviewer.review}</p>
+                                </div>
+                            </div>
+                            <div className='w-[15%]'></div>
+                        </div>
+                    </div>
+                    
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default Reviews
+
+I want that whenever I hover on "read" that particular review should get displayed and when I hover on another read the previous review should go away and the review of current read should get displayed.
+
+
+
+{[
+                    {
+                        topic: "• fyde",
+                        url: "https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png",
+                        links: ["audit", "copywriting", "sales deck", "slides design"]
+                    },
+                    {
+                        topic: "• vise",
+                        url: "https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg",
+                        links: ["agency", "company presentation"]
+                    },
+                    {
+                        topic: "• trawa",
+                        url: "https://ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg",
+                        links: ["brand identity", "design research", "investor deck"]
+                    },
+                    {
+                        topic: "• premium blend",
+                        url: "https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png",
+                        links: ["brand template"]
+                    },
+                ].map((item, index) => (
+                    <div key={index} className=' w-[49%] flex flex-col gap-2'>
+                        <h3 className='uppercase'>{item.topic}</h3>
+                        <div className='p-2'>
+                            <div onClick={handleMouseEnter} className=' overflow-hidden'>
+                                <img className='rounded-xl h-full w-full' src={item.url} alt="" />
+                            </div>
+                        </div>
+                        <div className='flex gap-2'>
+                            {item.links.map((link, index) => (
+                                <a key={index} href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                    <span className='uppercase text-xs cursor-pointer'>{link}</span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+
+
+                
+                
+
+                {/* {
+                            (review.id === currentReviewId) &&
+                            <div className='justify-between pb-5 mt-20'>
+                                <div className='w-1/4'></div>
+                                <div className='w-1/4 flex flex-col gap-2'>
+                                    {review.services.body.map((item, index) => (
+                                        <div key={index} className='flex items-center gap-2'>
+                                            <a className=' border-[1px] border-zinc-600 rounded-full w-fit px-3 py-1' href="">
+                                                <span className=' uppercase'>{item}</span>
+                                            </a>
+                                            <div className="arrow h-8 w-8 opacity-0 border-[1px] rounded-full border-zinc-500 flex items-center justify-center" >
+                                                <FaArrowUpLong className='rotate-45' />
+                                            </div >
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className='w-[35%]'>
+                                    <div>
+                                        <img className=' h-24 w-24 rounded-lg mb-5' src={review.reviewer.imgUrl} alt="" />
+                                        <p>{review.reviewer.review}</p>
+                                    </div>
+                                </div>
+                                <div className='w-[15%]'></div>
+                            </div>
+                        } */}
+
+
+
+                        {/* <div className='flex flex-col gap-10 p-10'>
+                <div className='flex'>
+                    <div className=' w-1/2 flex flex-col gap-2'>
+                        <h3 className='uppercase pl-5'>• fyde</h3>
+                        <div className='p-2'>
+                            <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className=' relative '>
+                                <h1 className=' flex absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 text-8xl uppercase z-10 overflow-hidden'>
+                                    {"Fyde".split("").map((item,index)=>(
+                                        <motion.span initial={{y: "100%"}} animate={{y: isHovered ? 0 : "100%"}} transition={{ease: [0.45, 0, 0.55, 1], duration: 0.5, delay: index*0.06}} key={index} className=' inline-block text-[#cdea68]'>{item}</motion.span>
+                                    ))}
+                                </h1>
+                                <img className='rounded-xl h-full w-full' src="https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png" alt="" />
+                            </div>
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>audit</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>copywriting</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>sales deck</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>slides design</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className=' w-1/2 flex flex-col gap-2'>
+                        <h3 className='uppercase pl-5'>• vise</h3>
+                        <div className='p-2'>
+                            <div className=' relative'>
+                                <h1 className='absolute whitespace-nowrap tracking-tighter right-full top-1/2 translate-x-1/2 -translate-y-1/2 text-[#CDEA68] text-8xl uppercase z-10'>
+                                {"vise".split((item,index)=>(
+                                        <span key={index}>{item}</span>
+                                    ))}
+                                </h1>
+                                <img className='rounded-xl h-full w-full' src="https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>agency</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>company presentation</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div className='flex'>
+                    <div className=' w-1/2 flex flex-col gap-2'>
+                        <h3 className='uppercase pl-5'>• trawa</h3>
+                        <div className='p-2'>
+                            <div className=' relative'>
+                                <h1 className='absolute whitespace-nowrap tracking-tighter left-full top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 text-8xl uppercase z-10'>
+                                {"trawa".split((item,index)=>(
+                                        <span key={index}>{item}</span>
+                                    ))}
+                                </h1>
+                                <img className='rounded-xl h-full w-full' src="https://ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>brand identity</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>design research</span>
+                            </a>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>investor deck</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div className=' w-1/2 flex flex-col gap-2'>
+                        <h3 className='uppercase pl-5'>• PREMIUM BLEND</h3>
+                        <div className='p-2'>
+                            <div className=' relative'>
+                                <h1 className='absolute whitespace-nowrap tracking-tighter right-full top-1/2 translate-x-1/2 -translate-y-1/2 bg-red-500 text-8xl uppercase z-10'>
+                                {"premium blend".split((item,index)=>(
+                                        <span key={index}>{item}</span>
+                                    ))}
+                                </h1>
+                                <img className='rounded-xl h-full w-full' src="https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png" alt="" />
+                            </div>
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href="#" className=' px-3 py-1 border-[1px] border-zinc-600 rounded-full flex items-center justify-center'>
+                                <span className='uppercase text-xs cursor-pointer'>brand template</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
